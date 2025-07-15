@@ -2,7 +2,7 @@
 
 **VAPI Call Manager** is a web application built with **Flask** (Python) and a modern frontend (Next.js + Tailwind CSS) for managing and initiating voice calls using contact lists uploaded in Excel format.
 
-![VAPI Call Manager Screenshot](./path/to/your/screenshot.png)
+![VAPI Call Manager Screenshot](./screenshots/vapi-call-manager.png)
 
 ---
 
@@ -96,4 +96,3 @@
 └── README.md
 
 
-![Screenshot](./screenshots/vapi-call-manager.png)
