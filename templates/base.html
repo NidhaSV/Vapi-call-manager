@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VAPI Call Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+  <nav class="bg-gradient-to-r from-blue-600 to-purple-600 p-4 shadow">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-white text-2xl font-bold flex items-center">
+        📞 VAPI Call Manager
+      </h1>
+      <ul class="flex space-x-4 text-white">
+        <li><a href="{{ url_for('index') }}" class="hover:underline">Upload Contacts</a></li>
+        <li><a href="{{ url_for('view_responses') }}" class="hover:underline">View Results</a></li>
+        <li><a href="{{ url_for('vapi_response') }}" class="hover:underline">Call Responses</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container mx-auto p-8">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
