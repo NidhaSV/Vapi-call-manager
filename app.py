@@ -14,12 +14,13 @@ UPLOAD_FOLDER = 'uploads'
 RESPONSE_LOG = 'vapi_responses.csv'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-VAPI_API_KEY = ""
-VAPI_AGENT_ID = ""
-TWILIO_PHONE_NUMBER = ""
-TWILIO_SID = ""
-TWILIO_AUTH_TOKEN = ""
-WEBHOOK_URL = ""
+VAPI_API_KEY = os.getenv("VAPI_API_KEY")
+VAPI_AGENT_ID = os.getenv("VAPI_AGENT_ID")
+TWILIO_PHONE_NUMBER = os.getenv("TWILIO_PHONE_NUMBER")
+TWILIO_SID = os.getenv("TWILIO_SID")
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+WEBHOOK_URL = os.getenv("WEBHOOK_URL")
+
 
 HEADERS = {
     "Authorization": f"Bearer {VAPI_API_KEY}",
@@ -143,4 +144,4 @@ def static_files(filename):
     return send_from_directory('static', filename)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
